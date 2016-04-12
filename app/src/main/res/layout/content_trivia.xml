@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.haungsn.finalprojectapi15.TriviaActivity"
+    tools:showIn="@layout/activity_trivia"
+    android:background="@color/material_grey_800">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/question_card"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            card_view:cardElevation="2dp"
+            card_view:cardBackgroundColor="#7C2B83"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/question_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Question Goes Here"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textSize="20sp"
+                android:textColor="#FFF" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/choice1_card"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            card_view:cardElevation="2dp"
+            card_view:cardBackgroundColor="#00467F"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/choice1_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Choice 1 Goes Here"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="#FFF" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/choice2_card"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            card_view:cardElevation="2dp"
+            card_view:cardBackgroundColor="#00467F"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/choice2_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Choice 2 Goes Here"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="#FFF" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/choice3_card"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            card_view:cardElevation="2dp"
+            card_view:cardBackgroundColor="#00467F"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/choice3_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Choice 3 Goes Here"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="#FFF" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/choice4_card"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            card_view:cardElevation="2dp"
+            card_view:cardBackgroundColor="#00467F"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/choice4_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Choice 4 Goes Here"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="#FFF" />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Score:"
+            android:id="@+id/scoreTextView"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Question: Current / Total"
+            android:id="@+id/statusTextView"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

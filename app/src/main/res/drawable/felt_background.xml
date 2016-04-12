@@ -1,0 +1,7 @@
+<!-- This code is courtesy of
+http://androidforbeginners.blogspot.com/2010/06/how-to-tile-background-image-in-android.html -->
+<bitmap
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/felt_background_pattern"
+    android:tileMode="repeat"
+    android:dither="true" />
