@@ -198,6 +198,7 @@ public class TriviaActivity extends AppCompatActivity {
     }
 
     public void showCardsAndTextMC(){
+        currentMCQuestion.shuffleAnswers();
         questionText.setText(currentMCQuestion.getQuestion());
         choice1Text.setText(currentMCQuestion.getChoices().get(0));
         choice2Text.setText(currentMCQuestion.getChoices().get(1));

@@ -78,7 +78,7 @@ public class DBManager extends SQLiteOpenHelper{
         super(context,
                 /*db name=*/ DB_NAME,
                 /*cursorFactory=*/ null,
-                /*db version=*/22);
+                /*db version=*/23);
         this.context = context;
         db = this.getWritableDatabase();
     }
@@ -141,29 +141,34 @@ public class DBManager extends SQLiteOpenHelper{
     }
 
     private void insertCards(ArrayList<DBCard> cards){
-        String values = DBCard.toSQL(cards);
-        String sql = "INSERT INTO " + CARD_TABLE_NAME + " VALUES " + values;
-        db.execSQL(sql);
+        for(int i=0;i< cards.size();i++){
+            String sql = "INSERT INTO " + CARD_TABLE_NAME + " VALUES " + cards.get(i).toSQL();
+            db.execSQL(sql);
+        }
     }
 
     private void insertEvents(ArrayList<DBEvent> events){
-        String values = DBEvent.toSQL(events);
-        String sql = "INSERT INTO " + EVENT_TABLE_NAME + " VALUES " + values;
+        for(int i=0;i<events.size();i++){
+            String sql = "INSERT INTO " + EVENT_TABLE_NAME + " VALUES " + events.get(i).toSQL();
+            db.execSQL(sql);
+        }
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL(sql);
+
     }
 
     private void insertTF(ArrayList<DBTFQuestion> questions){
-        String values = DBTFQuestion.toSQL(questions);
-        String sql = "INSERT INTO " + TF_TABLE_NAME + " VALUES " + values;
-        db.execSQL(sql);
+        for(int i =0; i<questions.size();i++){
+            String sql = "INSERT INTO " + TF_TABLE_NAME + " VALUES " + questions.get(i).toSQL();
+            db.execSQL(sql);
+        }
     }
 
+
     private void insertMC(ArrayList<DBMCQuestion> questions){
-        String values = DBMCQuestion.toSQL(questions);
-        String sql = "INSERT INTO " + MC_TABLE_NAME + " VALUES " + values;
-        
-        db.execSQL(sql);
+        for(int i =0; i<questions.size();i++){
+            String sql = "INSERT INTO " + MC_TABLE_NAME + " VALUES " + questions.get(i).toSQL();
+            db.execSQL(sql);
+        }
     }
 
     public ArrayList<DBCard> fetchNCards(int n){
@@ -199,6 +204,23 @@ public class DBManager extends SQLiteOpenHelper{
             ));
         }
         
+        return events;
+    }
+
+    public ArrayList<DBEvent> fetchAllEvents(){
+        String sql = "SELECT * FROM " + EVENT_TABLE_NAME + " ORDER BY " + EVENT_DATE;
+        Cursor c = db.rawQuery(sql, null);
+        ArrayList<DBEvent> events = new ArrayList<>();
+        while(c.moveToNext()){
+            events.add(new DBEvent(
+                    c.getInt(0),//id
+                    c.getString(1),//location
+                    c.getString(2),//desc
+                    c.getString(3),//link
+                    c.getString(4)//date
+            ));
+        }
+
         return events;
     }
 

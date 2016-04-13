@@ -2,74 +2,74 @@
 <items version="2" >
 
     <item
-        jar="/Users/jbrisbin32/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_e5bae9906692e41c1bc42a78ca27fda5fe93e351.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_b009fc995254a01f3a090c45b4745e2ac3619803.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="463e3e6e852ceb2df50563412ec3113d96321216">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/instant-run_acd6c12699e5ba1e53467fd561a34494393a19c3.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_40965e684f845a2662f6019045a23c1bb6fa87d0.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="79c8d661f7a36fc178a5b6371b35a6d5c4d65eed">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_264d1f8ba2dd3026f4a8ae2f68247252224ee54e.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_ee86cc902a94f90dcd94c39db9b1a6cc892d8e54.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_3c0ccda62d21c4c4af18413bd853609cf7455a4d.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_1293be6288c18679ec741df6a7fa5ca1abcedd75.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_1a03ed1f5653304218b03d819e007c7a9bbcb856.jar" />
-    </item>
-    <item
-        jar="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jar="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
         jumboMode="true"
         revision="23.0.2"
         sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
-        <dex dex="/Users/jbrisbin32/AndroidStudioProjects/SeniorResearchWithDB/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.0.1_e276cfbb592f03c0b93d3325f1944bf732cd8f95.jar" />
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.0.1_d79d0ac9b99da1cbb176a577a4ec62d3a7ef7854.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_63b6696f10839e75c2c81059bf08f442d24012dc.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0c2d63dbdeeec551188dd7d37984ef298e45b44b">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\instant-run_c09577ed36e9569ed32728edbbfd7f916e36dcfe.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7a122e74b2e9ee35cbe77830a59643857652d1ea">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_6e0a9434fc9cb7831ae26444008310b7c14baab6.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_3e801f2c585276f3f273a9825aabeda71442f872.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_418b8028c360f8ed7f410ac030dafc50648c59de.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_c4f27170068053bbf70816bc42ffe6a38e4bb14c.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_4ea87f598ca6482b8cae353a4d3275444819f8ec.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_aa62da231c34e4c3ebdce0777e5fc752d6930946.jar" />
+    </item>
+    <item
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\User\AndroidStudioProjects\SeniorResearchWithDB\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_badcc59626c8bf60fbd570ba883ac0f8d5c9be7a.jar" />
     </item>
 
 </items>

@@ -46,8 +46,8 @@ public class DBTFQuestion extends Question{
             true_number = 1;
         }
         String s = "(" +
-                this.id + "," +
-                true_number + ",'" +
+                this.id + ",'" +
+                true_number + "' ,'" +
                 this.question.replace("'","''") + "'" + ")";
         return s;
     }

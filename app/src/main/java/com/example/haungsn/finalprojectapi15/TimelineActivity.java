@@ -33,7 +33,7 @@ public class TimelineActivity extends AppCompatActivity {
         dbManager = new DBManager(this.getApplicationContext());
 
         /*Gets DBEvent objects from the database.*/
-        timelineItems = dbManager.fetchNEvents(20);
+        timelineItems = dbManager.fetchAllEvents();
 
         /*Define RecyclerView with accompanying LayoutManager and custom adapter.*/
         timelineLayoutManager = new LinearLayoutManager(this.getApplicationContext());
