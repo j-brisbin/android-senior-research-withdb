@@ -7,6 +7,8 @@ import android.util.Log;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.io.FileNotFoundException;
+
 public class MemoryGameActivity extends AppCompatActivity {
 
     //todo padding around canvas edge
@@ -16,7 +18,7 @@ public class MemoryGameActivity extends AppCompatActivity {
     private RelativeLayout relativeLayout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -26,8 +28,14 @@ public class MemoryGameActivity extends AppCompatActivity {
         relativeLayout.addView(memoryView);
         memoryView.post(new Runnable() {
             @Override
-            public void run() {
-                memoryView.initialize();
+            public void run(){
+                try{
+                    memoryView.initialize();
+                }
+                catch(FileNotFoundException fnfe){
+
+                }
+
             }
         });
 

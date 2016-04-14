@@ -1,12 +1,9 @@
 package com.example.haungsn.finalprojectapi15;
 
 import android.content.Context;
-import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Matrix;
-import android.util.Log;
 
 /**
  * Created by User on 11/28/2015.
@@ -15,18 +12,21 @@ public class Card extends ImageSprite{
     private boolean faceDown;
     private String description;
     private String name;
-    private int frontImageID;
+    private String birth;
+    private String death;
+    private Bitmap frontImageBitmap;
     private int backImageID;
+    private InternalStorage internalStorage;
     private int viewWidth;
     private int viewHeight;
     private Resources resources;
     private int x;
     private int y;
-    public Card(Context context, Resources resources, int frontImageID,
+    public Card(Context context, Resources resources, Bitmap frontImageBitmap,
                 int backImageID, int x, int y, int viewWidth,
                 int viewHeight, String name, String description){
         super(context,resources,backImageID,x,y,0.4,0.4);
-        this.frontImageID = frontImageID;
+        this.frontImageBitmap = frontImageBitmap;
         this.backImageID = backImageID;
         this.x = x;
         this.y = y;
@@ -38,12 +38,12 @@ public class Card extends ImageSprite{
         this.viewWidth = viewWidth;
     }
 
-    public Card(Context context, Resources resources, int frontImageID,
+    public Card(Context context, Resources resources, Bitmap frontImageBitmap,
                 int backImageID, int x, int y,
                 double xScale, double yScale, int viewWidth,
                 int viewHeight, String name, String description){
         super(context,resources,backImageID,x,y,xScale,yScale);
-        this.frontImageID = frontImageID;
+        this.frontImageBitmap = frontImageBitmap;
         this.backImageID = backImageID;
         this.x = x;
         this.y = y;
@@ -65,7 +65,7 @@ public class Card extends ImageSprite{
             faceDown = false;
         }
         else{
-            this.setImage(frontImageID);
+            this.setImage(frontImageBitmap);
             faceDown = true;
         }
         return faceDown;
@@ -95,12 +95,12 @@ public class Card extends ImageSprite{
         this.name = name;
     }
 
-    public int getFrontImageID() {
-        return frontImageID;
+    public Bitmap getFrontImageBitmap() {
+        return frontImageBitmap;
     }
 
-    public void setFrontImageID(int frontImageID) {
-        this.frontImageID = frontImageID;
+    public void setFrontImageBitmap(Bitmap frontImageBitmap) {
+        this.frontImageBitmap = frontImageBitmap;
     }
 
     public int getBackImageID() {
@@ -125,5 +125,21 @@ public class Card extends ImageSprite{
 
     public void setViewHeight(int viewHeight) {
         this.viewHeight = viewHeight;
+    }
+
+    public String getDeath() {
+        return death;
+    }
+
+    public void setDeath(String death) {
+        this.death = death;
+    }
+
+    public String getBirth() {
+        return birth;
+    }
+
+    public void setBirth(String birth) {
+        this.birth = birth;
     }
 }

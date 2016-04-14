@@ -55,50 +55,28 @@ public class ImageSprite extends Sprite implements Target
 
     }
 
-    public ImageSprite(Resources resources, int resourceId, int x, int y)
+    public ImageSprite(Context context, Resources resources, String imageSrc,
+                       int x, int y, double scaleX, double scaleY)
     {
         super(x, y, 0, 0);
         this.resources = resources;
         this.canvas = null;
 
-        image = BitmapFactory.decodeResource(resources, resourceId, null);
-        this.xScale = 1;
-        this.yScale = 1;
+        image = BitmapFactory.decodeFile(imageSrc, null);
+
+        this.xScale = scaleX;
+        this.yScale = scaleY;
         this.radians = 0;
         this.viewWidth = 0;
         this.viewHeight = 0;
-
-        //  isScaledRelativeToCanvas = false;
-
+        this.image = image.copy(image.getConfig(), true);
+        /*Picasso code is courtesy of square.github.io and StackOverflow
+        * http://square.github.io/picasso/
+          http://stackoverflow.com/questions/33472916/get-bitmap-image-using-picasso-library
+          http://square.github.io/picasso/2.x/picasso/ */
+        Picasso.with(context).load(imageSrc).into(this);
         this.setWidth(this.image.getWidth());
         this.setHeight(this.image.getHeight());
-        //  this.scaledImage = Bitmap.createScaledBitmap(this.image, this.getWidth(),this.getHeight(), true);
-        this.image = image.copy(image.getConfig(),true);
-
-        this.isVisible = true;
-
-    }
-
-    public ImageSprite(Resources resources, Bitmap bitmap, int x, int y)
-    {
-        super(x, y, 0, 0);
-        this.resources = resources;
-        this.canvas = null;
-
-        image = bitmap;
-        this.xScale = 1;
-        this.yScale = 1;
-        this.radians = 0;
-        this.viewWidth = 0;
-        this.viewHeight = 0;
-
-        //  isScaledRelativeToCanvas = false;
-
-        this.setWidth(this.image.getWidth());
-        this.setHeight(this.image.getHeight());
-        //  this.scaledImage = Bitmap.createScaledBitmap(this.image, this.getWidth(),this.getHeight(), true);
-        this.image = image.copy(image.getConfig(),true);
-
         this.isVisible = true;
 
     }
@@ -106,6 +84,20 @@ public class ImageSprite extends Sprite implements Target
     public void setImage(int id)
     {
         image = BitmapFactory.decodeResource(resources, id, null);
+        this.setWidth((int)(this.image.getWidth()*xScale));
+        this.setHeight((int) (this.image.getHeight() * yScale));
+        this.image = Bitmap.createScaledBitmap(this.image, this.getWidth(),this.getHeight(), true);
+    }
+
+    public void setImage(String imageSrc){
+        image = BitmapFactory.decodeFile(imageSrc, null);
+        this.setWidth((int)(this.image.getWidth()*xScale));
+        this.setHeight((int) (this.image.getHeight() * yScale));
+        this.image = Bitmap.createScaledBitmap(this.image, this.getWidth(),this.getHeight(), true);
+    }
+
+    public void setImage(Bitmap bitmapImage){
+        image = bitmapImage;
         this.setWidth((int)(this.image.getWidth()*xScale));
         this.setHeight((int) (this.image.getHeight() * yScale));
         this.image = Bitmap.createScaledBitmap(this.image, this.getWidth(),this.getHeight(), true);

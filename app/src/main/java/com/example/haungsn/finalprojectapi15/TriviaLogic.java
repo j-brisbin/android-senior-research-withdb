@@ -48,19 +48,19 @@ public class TriviaLogic {
 
     public DBTFQuestion RandomSelectTrueFalse(){
         Random r = new Random();
-        int randomSelection = r.nextInt(trueFalseQuestions.size());
+        int randomSelection = r.nextInt(this.trueFalseQuestions.size());
         Log.i("Random selection TF", randomSelection + "");
-        currentTrueFalseQuestion =  trueFalseQuestions.get(randomSelection);
-        return currentTrueFalseQuestion;
+        this.currentTrueFalseQuestion =  this.trueFalseQuestions.get(randomSelection);
+        return this.currentTrueFalseQuestion;
     }
 
     public DBMCQuestion RandomSelectMultipleChoice(){
         Random r = new Random();
-        int randomSelection = r.nextInt(multipleChoiceQuestions.size());
+        int randomSelection = r.nextInt(this.multipleChoiceQuestions.size());
         Log.i("Random selection MC", randomSelection + "");
-        currentMultipleChoiceQuestion =  multipleChoiceQuestions.get(randomSelection);
+        this.currentMultipleChoiceQuestion =  this.multipleChoiceQuestions.get(randomSelection);
         //currentMultipleChoiceQuestion.shuffleAnswers();
-        return currentMultipleChoiceQuestion;
+        return this.currentMultipleChoiceQuestion;
     }
 
     public String questionStatus(){

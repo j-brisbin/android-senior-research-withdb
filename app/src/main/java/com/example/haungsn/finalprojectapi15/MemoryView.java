@@ -13,6 +13,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.FileNotFoundException;
+
 /**
  * Created by User on 11/28/2015.
  */
@@ -32,7 +34,7 @@ public class MemoryView extends View {
 
     }
 
-    public void initialize(){
+    public void initialize() throws FileNotFoundException{
         int screenSize = getResources().getConfiguration().screenLayout &
                 Configuration.SCREENLAYOUT_SIZE_MASK;
         Log.i("screensize", "Screen Size: " + screenSize);
