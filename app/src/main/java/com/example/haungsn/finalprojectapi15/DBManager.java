@@ -208,8 +208,8 @@ public class DBManager extends SQLiteOpenHelper{
     }
 
     public ArrayList<DBEvent> fetchAllEvents(){
-        String sql = "SELECT * FROM " + EVENT_TABLE_NAME + " ORDER BY " + EVENT_DATE;
-        Cursor c = db.rawQuery(sql, null);
+        String sql = "SELECT * FROM " + EVENT_TABLE_NAME + " ORDER BY DATE(" + EVENT_DATE + ") ASC";
+        Cursor c = db.rawQuery(sql,null);
         ArrayList<DBEvent> events = new ArrayList<>();
         while(c.moveToNext()){
             events.add(new DBEvent(

@@ -98,8 +98,8 @@ public class ImageSprite extends Sprite implements Target
 
     public void setImage(Bitmap bitmapImage){
         image = bitmapImage;
-        this.setWidth((int)(this.image.getWidth()*xScale));
-        this.setHeight((int) (this.image.getHeight() * yScale));
+        this.setWidth((int)(this.image.getWidth()* (xScale * 2)));
+        this.setHeight((int) (this.image.getHeight() * (yScale * 2)));
         this.image = Bitmap.createScaledBitmap(this.image, this.getWidth(),this.getHeight(), true);
     }
     public void setImageScaledRelativeToCanvas(int id, double xScale, double yScale, int viewWidth, int viewHeight)  //can only be called after view has been created

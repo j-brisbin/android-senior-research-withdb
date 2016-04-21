@@ -99,8 +99,8 @@ public class MenuActivity extends AppCompatActivity {
         }
         /*Builds the loadingDialog, then creates it, to be passed into CountDownTimers */
         loadingDialogBuilder = new AlertDialog.Builder(this);
-        loadingDialogBuilder.setTitle("Updaing Content")
-                .setMessage("Updating content.\nPlease wait...");
+        loadingDialogBuilder.setTitle("Updating Content")
+                .setMessage("Application content is being updated.\nPlease wait...");
         loadingDialog = loadingDialogBuilder.create();
 
         /*Database code is courtesy of Nathan Haungs*/
@@ -110,6 +110,7 @@ public class MenuActivity extends AppCompatActivity {
         /*Additional timer created for fetching the images.*/
         final CountDownTimer timer = new CountDownTimer(3000, 1000) {
             public void onTick(long millisUntilFinished) {
+                loadingDialog.show();
                 if (dbManager.getRequestPending() == 0) { //all requests are done
                     this.cancel();
                     this.onFinish();
@@ -119,6 +120,18 @@ public class MenuActivity extends AppCompatActivity {
             public void onFinish() {
                 if (dbManager.getRequestPending() > 0) { // requests not done yet
                     Log.d("Activity:", "Fetch updates still working");
+                    new AlertDialog.Builder(MenuActivity.this).setTitle("Content Update")
+                            .setMessage("Content updates are taking longer than expected." +
+                                    "\nPlease wait...")
+                            .setPositiveButton("OK",
+                                    new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    })
+                            .create()
+                            .show();
                     this.start();
                 }
                 else if (dbManager.getRequestPending() < 0) { //requests have error
@@ -143,8 +156,8 @@ public class MenuActivity extends AppCompatActivity {
         /*Initial anonymous CountDownTimer for getting content updates.*/
         new CountDownTimer(3000, 1000) {
             public void onTick(long millisUntilFinished) {
+                loadingDialog.show();
                 if (dbManager.getRequestPending() == 0) { //all requests are done
-                    loadingDialog.show();
                     this.cancel();
                     this.onFinish();
                 }

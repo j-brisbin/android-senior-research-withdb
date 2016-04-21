@@ -31,6 +31,12 @@ public class TriviaLogic {
     }
 
     public void restartGame(){
+        for(int i = 0;i<trueFalseQuestions.size();i++){
+            trueFalseQuestions.get(i).setAlreadyAnswered(false);
+        }
+        for(int i = 0;i<multipleChoiceQuestions.size();i++){
+            multipleChoiceQuestions.get(i).setAlreadyAnswered(false);
+        }
         this.score = 0;
         this.currentQuestionCount = 0;
         this.currentQuestionType = "";
@@ -51,6 +57,11 @@ public class TriviaLogic {
         int randomSelection = r.nextInt(this.trueFalseQuestions.size());
         Log.i("Random selection TF", randomSelection + "");
         this.currentTrueFalseQuestion =  this.trueFalseQuestions.get(randomSelection);
+		if(this.currentTrueFalseQuestion.getAlreadyAnswered()){
+			randomSelection = r.nextInt(this.trueFalseQuestions.size());
+			Log.i("Random selection TF", randomSelection + "");
+			this.currentTrueFalseQuestion =  this.trueFalseQuestions.get(randomSelection);
+		}
         return this.currentTrueFalseQuestion;
     }
 
@@ -59,7 +70,13 @@ public class TriviaLogic {
         int randomSelection = r.nextInt(this.multipleChoiceQuestions.size());
         Log.i("Random selection MC", randomSelection + "");
         this.currentMultipleChoiceQuestion =  this.multipleChoiceQuestions.get(randomSelection);
-        //currentMultipleChoiceQuestion.shuffleAnswers();
+		if(this.currentMultipleChoiceQuestion.getAlreadyAnswered()){
+			randomSelection = r.nextInt(this.multipleChoiceQuestions.size());
+			Log.i("Random selection MC", randomSelection + "");
+			this.currentMultipleChoiceQuestion =  this.multipleChoiceQuestions.get(randomSelection);
+			currentMultipleChoiceQuestion.shuffleAnswers();
+		}
+		currentMultipleChoiceQuestion.shuffleAnswers();
         return this.currentMultipleChoiceQuestion;
     }
 
@@ -82,14 +99,6 @@ public class TriviaLogic {
             }
         }
         return "Done";
-    }
-
-    public int incrementCorrectQuestionCount(){
-        if(currentMultipleChoiceQuestion.checkAnswer() ||
-                currentTrueFalseQuestion.checkAnswer()){
-            return questionCorrectCount++;
-        }
-        return questionCorrectCount;
     }
 
     public int getCurrentQuestionCount() {

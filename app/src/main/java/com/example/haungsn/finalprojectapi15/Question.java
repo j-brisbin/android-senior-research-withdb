@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Question {
 
     private int id;
+	private boolean alreadyAnswered;
     private String question;
     private String correctAnswer;
     private ArrayList<String> choices;
@@ -24,6 +25,7 @@ public class Question {
         this.correctAnswer = "Default Correct Answer";
         this.choices = new ArrayList<>();
         this.selectedAnswer = "Default Selected Answer";
+		this.alreadyAnswered = false;
     }
 
     public Question(int id, String question, String correctAnswer, ArrayList<String> choices){
@@ -69,6 +71,14 @@ public class Question {
         Log.i("selectedAnswer",selectedAnswer);
         this.selectedAnswer = selectedAnswer;
     }
+	
+	public void setAlreadyAnswered(boolean alreadyAnswered){
+		this.alreadyAnswered = alreadyAnswered;
+	}
+	
+	public boolean getAlreadyAnswered(){
+		return this.alreadyAnswered;
+	}
 
     public int getId() {
         return id;
@@ -85,6 +95,7 @@ public class Question {
     public boolean checkAnswer(){
         if(selectedAnswer.equals(correctAnswer)){
             Log.i("correct", "Answer correct!");
+            this.alreadyAnswered = true;
             return true;
         }
         else{
