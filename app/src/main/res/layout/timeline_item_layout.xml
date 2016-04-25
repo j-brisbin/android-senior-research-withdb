@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/timeline_item_location"
                 android:text="Location Goes Here"
-                android:textSize="10sp"
+                android:textSize="15sp"
                 android:textColor="#FFF" />
 
             <TextView
