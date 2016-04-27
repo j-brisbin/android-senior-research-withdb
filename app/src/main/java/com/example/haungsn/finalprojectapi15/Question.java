@@ -95,7 +95,7 @@ public class Question {
     public boolean checkAnswer(){
         if(selectedAnswer.equals(correctAnswer)){
             Log.i("correct", "Answer correct!");
-            this.alreadyAnswered = true;
+            this.setAlreadyAnswered(true);
             return true;
         }
         else{

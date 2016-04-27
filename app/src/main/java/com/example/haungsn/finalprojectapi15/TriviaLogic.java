@@ -58,9 +58,7 @@ public class TriviaLogic {
         Log.i("Random selection TF", randomSelection + "");
         this.currentTrueFalseQuestion =  this.trueFalseQuestions.get(randomSelection);
 		if(this.currentTrueFalseQuestion.getAlreadyAnswered()){
-			randomSelection = r.nextInt(this.trueFalseQuestions.size());
-			Log.i("Random selection TF", randomSelection + "");
-			this.currentTrueFalseQuestion =  this.trueFalseQuestions.get(randomSelection);
+			RandomSelectTrueFalse();
 		}
         return this.currentTrueFalseQuestion;
     }
@@ -71,10 +69,7 @@ public class TriviaLogic {
         Log.i("Random selection MC", randomSelection + "");
         this.currentMultipleChoiceQuestion =  this.multipleChoiceQuestions.get(randomSelection);
 		if(this.currentMultipleChoiceQuestion.getAlreadyAnswered()){
-			randomSelection = r.nextInt(this.multipleChoiceQuestions.size());
-			Log.i("Random selection MC", randomSelection + "");
-			this.currentMultipleChoiceQuestion =  this.multipleChoiceQuestions.get(randomSelection);
-			currentMultipleChoiceQuestion.shuffleAnswers();
+			RandomSelectMultipleChoice();
 		}
 		currentMultipleChoiceQuestion.shuffleAnswers();
         return this.currentMultipleChoiceQuestion;

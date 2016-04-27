@@ -140,7 +140,9 @@ public class MemoryLogic {
                                 cardSelectedCounter = 0;
                                 new AlertDialog.Builder(context).setTitle("You made a match!")
                                         .setMessage(firstCard.getName() + "\n" +
-                                                firstCard.getDescription() + "\n")
+                                                firstCard.getDescription()/* + "\n" +
+                                                "Birth: " + firstCard.getBirth() + "\n" +
+                                                "Death: " + firstCard.getDeath()*/)
                                         .setPositiveButton("OK",
                                                 new DialogInterface.OnClickListener() {
                                                     @Override
